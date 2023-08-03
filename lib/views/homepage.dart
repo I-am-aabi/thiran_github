@@ -41,7 +41,8 @@ class HomePage extends StatelessWidget {
               },
             );
           } else {
-            return const Center(child: CircularProgressIndicator());
+            githubRepo.fetchRepositories();
+                    return const Center(child: CircularProgressIndicator());
           }
         },
       ),
