@@ -7,7 +7,7 @@ class Gitcontrolller extends ChangeNotifier {
   List<dynamic>? _repositories = [];
   int _currentPage = 1;
   bool _hasReachedEnd = false;
-  bool _is30days = true;
+  bool _is30days = false;
 
   List<dynamic>? get repositories => _repositories;
   bool get hasReachedEnd => _hasReachedEnd;
@@ -15,6 +15,8 @@ class Gitcontrolller extends ChangeNotifier {
 
   change30days() {
     _is30days = !_is30days;
+    _repositories = [];
+    _currentPage = 1;
     fetchRepositories();
   }
 

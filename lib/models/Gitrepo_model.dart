@@ -22,20 +22,17 @@ class Gitrepo {
 
 class Item {
   int id;
-
   String name;
   String fullName;
   bool private;
   Owner owner;
   String htmlUrl;
   String? description;
-
   int size;
   int stargazersCount;
 
   Item({
     required this.id,
-
     required this.name,
     required this.fullName,
     required this.private,
@@ -48,7 +45,6 @@ class Item {
 
   factory Item.fromJson(Map<String, dynamic> json) => Item(
         id: json["id"],
-        
         name: json["name"],
         fullName: json["full_name"],
         private: json["private"],
